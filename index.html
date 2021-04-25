@@ -6,8 +6,8 @@
   function scrollHorizontally(e) {
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    document.documentElement.scrollLeft -= (delta * -50);
-    document.body.scrollLeft -= (delta * -50);
+    document.documentElement.scrollLeft -= (delta * -70);
+    document.body.scrollLeft -= (delta * -70);
     e.preventDefault();
   }
   if (window.addEventListener) {
@@ -23,6 +23,10 @@
   body {
     font-size:2.2rem;
     font-family:kaiti;
+  }
+  div {
+    width:100%;
+    height:100%;
   }
 </style>
 <body dir="rtl">
