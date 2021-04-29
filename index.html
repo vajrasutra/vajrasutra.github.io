@@ -6,7 +6,7 @@
   function scrollHorizontally(e) {
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    document.body.scrollLeft += (delta * 80);
+    document.getElementById('body').scrollLeft += (delta * 70);
     e.preventDefault();
   }
   if (window.addEventListener) {
@@ -18,19 +18,31 @@
 })();
 </script>
 <style>
-@import url(https://victorlee.github.io/fonts/stylesheet.css);
+  @import url(https://victorlee.github.io/fonts/stylesheet.css);
   body {
+    margin: 0;
+  }
+  #body {
+    overflow:auto;
+    width:100%;
+    margin:0;
     writing-mode: vertical-rl;
-    writing-mode: tb-rl;
+    -moz-writing-mode: vertical-rl;
+    -o-writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
     white-space: pre-wrap; 
     word-wrap: break-word;
-    font-size: 2.2rem;
-    font-family: kaiti;
-    margin: 0;
-    padding-top: 1rem;
+    font-size:2.2rem;
+    font-family:kaiti;
+    padding-top:1rem;
+  }
+  ::selection {
+    background: #B5D6FC; color: #000;
   }
 </style>
 <body>
+<div id="body">
+
 <h2>金剛般若波羅蜜多經</h2>
 
 
@@ -194,5 +206,6 @@
 須菩堤若有人以滿無量阿僧祈世界七寶持用布施若有善男子善女人發菩薩心者持於此經乃至四句偈等受持讀誦爲人演說其福勝彼云何爲人演說不取於相如如不動何以故一切有爲法如夢幻泡影如露亦如電應作如是觀佛說是經已長老須菩堤及諸比丘比丘尼優婆塞優婆尼一切世間天人阿修羅聞佛所說皆大歡喜信受奉行
 
 
+</div>
 </body>
 </html>
